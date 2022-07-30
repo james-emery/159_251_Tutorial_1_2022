@@ -20,7 +20,12 @@ public class Greeter {
     String language = args[0];
     String country = args[1];
     String name = args[2];
-    Greeter greeter = new Greeter(language, country, name);
-    System.out.println(greeter.sayHello());
+    
+	if (name.length() > 5) {
+		Greeter greeter = new Greeter(language, country, name);
+		System.out.println(greeter.sayHello());
+	} else {
+		System.out.println("Name is too short. Add more letters");
+	}
   }
 }
